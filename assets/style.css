@@ -1,12 +1,14 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     display: flex;
 }
-header{
+
+header {
     width: 100%;
     height: 70px;
     /* border: 1px solid blue; */
@@ -16,12 +18,14 @@ header{
     box-shadow: 0 .5rem 1rem rgba(112, 111, 111, 0.15) !important;
 
 }
-.header-row{
+
+.header-row {
     width: 100%;
     height: 100%;
     display: flex;
 }
-.header-logo{
+
+.header-logo {
     width: 10%;
     height: 60%;
     /* border: 1px solid red; */
@@ -31,41 +35,40 @@ header{
     margin: 0.5rem 0 0 3.5rem;
 }
 
-.tabs{
+.tabs {
     width: 30%;
     height: 100%;
     margin-left: 3rem;
     /* border: 1px solid green; */
 }
 
-.tabs ul{
+.tabs ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
     margin: 1rem 0 0 0;
 }
 
-.tabs ul li a{
+.tabs ul li a {
     text-decoration: none;
     font-size: 1.1rem;
     color: black;
     font-size: 15px;
 }
 
-.tabs ul li:nth-child(1) a{
+.tabs ul li:nth-child(1) a {
     color: rgb(31, 198, 157);
     font-weight: 600;
 }
 
-.tabs ul li:nth-child(3) a .dropdown{
+.tabs ul li:nth-child(3) a .dropdown {
     color: rgb(71, 199, 71);
     font-weight: bold;
     width: 150px;
     height: 100px;
-    border: 1px solid blue;
-    position:absolute;
-    background: #ccc;
-    border: 1px solid #fff;
+    /* border: 1px solid blue; */
+    position: absolute;
+    /* background: #fff; */
     border-radius: 5px;
     display: flex;
     opacity: 0;
@@ -73,51 +76,95 @@ header{
     transition: 0.3s ease-in;
 }
 
-.tabs ul li:nth-child(3) a:hover .dropdown{
+.dropdown .about,
+.contact {
+    width: 100%;
+    height: 50%;
+    /* border: 1px solid red; */
+    display: flex;
+    padding: 0 0 0 1rem;
+    align-items: center;
+    background: #fff;
+    opacity: 0.8;
+}
+.dropdown .about:hover{
+    background: rgb(31, 198, 157, 0.3);
+    color: green;
+}
+.dropdown .about:hover form input{
+    color: green;
+}
+
+.dropdown .contact:hover{
+    background: rgb(31, 198, 157, 0.3);
+}
+.dropdown .contact:hover form input{
+    color: green;
+}
+
+.dropdown .about form input {
+    border: none;
+    /* width: 100%; */
+    background: none;
+    color: black;
+    font-size: 1.1rem;
+}
+.dropdown .contact form input {
+    border: none;
+    /* width: 100%; */
+    background: none;
+    color: black;
+    font-size: 1.1rem;
+}
+
+
+.tabs ul li:nth-child(3) a:hover .dropdown {
     opacity: 1;
 }
 
-.dropdown p{
+.dropdown p {
     color: black;
     font-weight: lighter;
     text-align: center;
 }
-.tabs ul li:nth-child(3) a .dropdown a{
+
+.tabs ul li:nth-child(3) a .dropdown a {
     display: flex;
 }
 
-.container{
+.container {
     width: 100%;
     height: auto;
-    margin-top: 3%;
+    margin-top: -1%;
     /* border: 2px solid red; */
     z-index: 0;
 }
 
-.container .row{
+.container .row {
     width: 100%;
     height: 600px;
     background-image: url(img/home01.jpg);
-    background-size: contain;
-    border: 2px solid red;
-    /* padding-top: 46%; */
+    background-size: cover;
+    /* border: 2px solid red; */
+
 }
 
-.text1{
+.text1 {
     /* border: 2px solid yellow; */
     height: 54%;
-    width: 53%;
+    width: 52%;
     color: rgb(45, 27, 110);
-    font-size:  1.04vw;
+    font-size: 1.04vw;
     line-height: 2rem;
     letter-spacing: 1px;
     margin-left: 3.5rem;
     margin-top: 5rem;
+    padding-top: 5rem;
     font-family: sans-serif;
     font-weight: 400;
 }
 
-h1{
+h1 {
     /* border: 2px solid orange; */
     height: 25%;
     width: 100%;
@@ -130,55 +177,265 @@ h1{
     color: white;
 }
 
-.cbn{
-    color: rgba(255, 255, 255, 0.863);
+.cbn {
     margin-left: 3.5rem;
-    margin-top: 1.7rem;
-    font-weight: 600;
-    font-size: larger;
-    /* border: 2px solid orange; */
+    margin-top: 8rem;
     width: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
-.ndic{
+
+.ndic {
     font-size: 1.6rem;
     font-weight: 700;
 }
 
-.row2{
-    border: 2px solid blue;
+.row2 {
+    /* border: 2px solid blue; */
     height: 550px;
     width: 100%;
     display: flex;
+    padding-top: 4rem;
 }
 
-.slide1{
-    border: 2px solid green;
+.slide1 {
+    /* border: 1px solid green; */
     width: 20%;
+}
+
+.slide2 {
+    /* border: 2px solid rgb(212, 0, 255); */
+    width: 20%;
+}
+
+.slide3 {
+    /* border: 2px solid rgb(16, 255, 255); */
+    width: 20%;
+}
+
+.slide4 {
+    /* border: 2px solid rgb(57, 3, 255); */
+    width: 20%;
+}
+
+.slide5 {
+    /* border: 2px solid rgb(235, 219, 3); */
+    width: 20%;
+}
+
+.row2 img {
+    height: 250px;
+    display: flex;
+    justify-self: right;
+    z-index: 999999;
+}
+
+.slide1 img {
+    z-index: 1;
+}
+
+.row2 .write {
+    margin-left: 1.4rem;
+    height: 220px;
+    width: 90%;
+    /* border: 2px solid green; */
+    justify-self: right;
+    padding-left: 1rem;
+    background-color: rgba(150, 255, 220, 0.062);
+    /* background: green; */
+    border-radius: 1.5rem;
+    font-weight: 800;
+    margin-top: -2rem;
+    z-index: 0;
+    transition: 0.3s all ease;
+}
+
+.write i {
+    padding: 2rem 0 30% 0;
+    color: rgb(31, 198, 157);
+
+}
+
+.row2 .write:hover {
+    background: rgb(31, 198, 157);
+}
+
+.row2 .write:hover p {
+    color: white;
+}
+
+.row2 .write:hover i {
+    color: white;
+}
+
+.row2 .write:hover h5 {
+    color: white;
+}
+
+.write p {
+    font-size: xx-small;
+    color: rgb(31, 198, 157);
+}
+
+h5 {
+    color: rgb(33, 15, 96);
+    font-size: 14px;
+}
+
+.ourservices {
+    /* border: 1px solid darkmagenta; */
+    width: 100%;
+    font-size: 40px;
+    font-weight: 650;
     padding-top: 3.5rem;
-    padding-left: 2rem;
-    
+    padding-left: 3.5rem;
+    color: rgb(33, 15, 96);
 }
 
-.slide2{
-    border: 2px solid rgb(212, 0, 255);
-    width: 20%;
+.row3 {
+    width: 100%;
+    height: 535px;
+    /* border: 2px solid orange; */
+    background-color: rgb(31, 198, 157);
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: space-between;
 }
 
-.slide3{
-    border: 2px solid rgb(16, 255, 255);
-    width: 20%;
+.fund {
+    /* border: 2px solid blue; */
+    height: 65%;
+    width: 40%;
+    align-self: center;
+    margin-left: 3.5rem;
 }
 
-.slide4{
-    border: 2px solid rgb(57, 3, 255);
-    width: 20%;
+.fund h1 {
+    font-size: 37.98px;
+    font-weight: 700;
+    line-height: 47.39px;
+    margin-bottom: 1.6rem;
+    font-family: sans-serif;
 }
 
-.slide5{
-    border: 2px solid rgb(235, 219, 3);
-    width: 20%;
+.fund p {
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
 }
 
+.live {
+    /* color: 2px solid yellow; */
+    height: 50%;
+    width: 100%;
+    padding-right: 1rem;
+    font-size: 30px;
+}
+
+.live p {
+    /* color: 2px solid yellow; */
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+.ourservicepic img{
+    /* border: 2px solid blue; */
+    height: 80%;
+    width: 90%;
+    margin-top: 3.5rem;
+    margin-right: 4rem;
+    border-radius: 20px;
+}
+
+.row4{
+    width: 100%;
+    height: 535px;
+    /* border: 2px solid orange; */
+    background-color: rgba(150, 255, 220, 0.062);
+    /* margin-top: 2.5rem; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.ourservicepic2 img{
+        /* border: 2px solid rgb(255, 0, 234); */
+        height: 70%;
+        width: 45%;
+        margin-top: 3.5rem;
+        margin-left: 3.5rem;
+        border-radius: 20px;
+        position: absolute;
+}
+
+.opaydebitcard{
+    /* border: 2px solid rgb(255, 0, 234); */
+    height: 65%;
+    width: 38%;
+    align-self: center;
+    padding-top: 3rem;
+    margin-right: 5rem;
+
+}
+
+.opaydebitcard h1{
+    color: rgb(31, 198, 157);
+    font-size: 37.98px;
+    font-weight: 700;
+    line-height: 47.39px;
+    margin-bottom: 1.6rem;
+    font-family: sans-serif;
+}
+
+.get{
+    height: 50%;
+    width: 100%;
+    padding-bottom: 10px;
+    /* border: 2px solid black; */
+    font-size: 30px;
+}
+.get p{
+    font-size: 23px;
+    color: rgb(33, 15, 96);
+    font-weight: 470;
+}
+
+.row5{
+    width: 100%;
+    height: 535px;
+    border: 2px solid red;
+    background-color: rgb(31, 198, 157);
+    /* margin-top: 2.5rem; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.owealth{
+        /* border: 2px solid blue; */
+        height: 50%;
+        width: 38%;
+        align-self: center;
+        margin-left: 4rem;
+        color: white;
+}
+.with{
+        /* border: 2px solid yellow; */
+        height: 50%;
+        width: 100%;
+        padding-right: 1rem;
+        font-size: 22px;
+        line-height: 35px;
+        margin-top: 1rem;
+}
+.owealth h2{
+    /* border: 2px solid black; */
+    width: 100%;
+    font-size: 35px;
+    font-family: sans-serif;
+}
+
+.ourservicepic3 img{
+        border: 2px solid red;
+        height: 80%;
+        width: 90%;
+        margin-top: 3.5rem;
+        margin-right: 4rem;
+        border-radius: 20px;
+    }
