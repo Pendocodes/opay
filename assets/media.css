@@ -1,0 +1,29 @@
+/* for mobile phone view */
+@media screen and (max-width:1000px) {
+    * {
+        overflow-x: hidden;
+    }
+
+    .header-row .tabs {
+        visibility: hidden;
+    }
+
+    .header-row button {
+        visibility: visible;
+        position: absolute;
+        right: 0;
+        margin: 1rem 1rem 0 0;
+        background: none;
+        border: none;
+
+    }
+
+    .container .row {
+        height: 500px;
+        width: 100%;
+        background-size: cover;
+        z-index: 0;
+    }
+
+
+}

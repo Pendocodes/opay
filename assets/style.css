@@ -33,11 +33,15 @@ header {
     justify-content: center;
     margin: 0.5rem 0 0 3.5rem;
 }
-
+.header-row button{
+    visibility: hidden;
+}
 .tabs {
     width: 30%;
     height: 100%;
     margin-left: 3rem;
+    visibility: visible;
+    /* display: flex; */
     /* border: 1px solid green; */
 }
 
